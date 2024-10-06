@@ -8,13 +8,13 @@ class PBox:
         # Create a result list of the correct size
         max_index = max(max(indices) if isinstance(indices, list) else indices for indices in self.key.values())
         result = [0] * max_index  # Ensuring the list is large enough to handle all indices
-
+        
         for index, value in enumerate(sequence):
             if (index + 1) in self.key:
                 indices = self.key.get(index + 1, [])
                 indices = indices if isinstance(indices, list) else [indices]
                 for i in indices:
-                    result[i - 1] = value
+                    result[i - 1] = value  # i-1 because list indexing is 0-based, whereas DES tables are 1-based
         return ''.join(map(str, result))
 
     @staticmethod
