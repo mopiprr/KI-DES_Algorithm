@@ -4,6 +4,11 @@ Kelas   : Keamanan Informasi A
 
 Tugas membuat encrypt - decrpy menggunakan algoritma DES
 
-`Cara pengeksekusi`
-``1. Ubah bagian plaintext pada main untuk mengencrypt sebuah string``
-``2. jalankan "python main.py"``
+## Cara eksekusi
+
+### Encrypt / Decrpt only
+`run main.py`
+
+### Client simulation
+`run server.py`
+`run client.py`
